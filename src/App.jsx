@@ -10,6 +10,7 @@ import CreateOrder, {
 import Order, { loader as orderLoader } from './features/order/Order';
 import { action as updateOrderAction } from './features/order/UpdateOrder';
 import AppLayout from './ui/AppLayout';
+import ReactGA from 'react-ga4';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  ReactGA.initialize(process.env.Measurement_id);
   return <RouterProvider router={router} />;
 }
 
