@@ -48,7 +48,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  ReactGA.initialize(process.env.Measurement_id);
+  ReactGA.initialize(import.meta.env.Measurement_id);
   return <RouterProvider router={router} />;
 }
 
